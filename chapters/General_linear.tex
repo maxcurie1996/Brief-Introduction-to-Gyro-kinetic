@@ -1,0 +1,394 @@
+\section{Gyro-averaging}
+
+From Equation \ref{eq:gyro_avg}, the transformation from really space to guiding center is: 
+
+\begin{equation}
+    <\Tilde{\textbf{E}}>= \textbf{E} J_{0,s}(k_{\perp}\rho )e^{i\Vec{k}\Vec{x}-i\omega t}
+\end{equation}
+
+Where $J_0$ is Bessel function of the first kind. 
+
+For device like ITER \cite{iter_scale}, the gyro-radius is so small compared with $k_{\perp}$, so $k_{\perp} \rho \rightarrow 0$, therefore $J_{0,s}(k_{\perp}\rho )\rightarrow 1$. That argument permits us to use guiding center without multiplying $J_0$ for the most cases.
+
+\section{General Solution}
+
+The following derivation is using Gauss Unit. For more information, please refer to the section \ref{sec:gauss}
+
+Without losing generality, we can assume.
+
+\begin{eqnarray}
+    \textbf{B}_0=B_0\hat{z}\\
+    \textbf{E}=E_{||}\hat{z}+E_y\hat{y}
+\end{eqnarray}
+
+The Hamiltonian of a charged particle in a magnetic field is,
+
+\begin{equation}
+H=\frac{1}{2 m_s}(\textbf{p}- \frac{q_s\textbf{A}(\textbf{r}, t)}{c})^{2}+q_s \phi(\textbf{r}, t)
+\end{equation}
+
+Where the subscript "s" stands for species.
+
+From the Debye shielding Equation \ref{eq:adiabatic}, we have the adiabatic perturbed term. 
+
+\begin{equation}
+\begin{aligned}
+    f{}&=F_0\left(1+\frac{q_s\textbf{v}\cdot \textbf{A}}{cT_s}-\frac{q_s\phi}{T_s} \right)+h_s\\
+    &=F_0+\delta f
+\end{aligned}
+\end{equation}
+
+Where $F_0$ is the Maxwellian distribution, $F_0\left(\frac{q_s\textbf{v}\cdot \textbf{A}}{cT_s}-\frac{q_s\phi}{T_s} \right)$ is adiabatic perturbed term, $h_s$ is the non-adiabatic perturbed term
+
+From Collisional Vlasov Equation
+
+\begin{equation}
+\frac{\partial f}{\partial t}+\frac{\mathbf{p}}{m_s} \cdot \nabla f+\mathbf{F} \cdot \frac{\partial f}{\partial \mathbf{p}}=\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}}
+\end{equation}
+
+Transform the coordinate from real space to guiding center space, then the velocity can be expressed in the following way
+
+Since the ion and electron's mass does not change,
+
+\begin{equation}
+\frac{\partial f}{\partial t}+\mathbf{v} \cdot \nabla f+
+\frac{<\mathbf{F}>}{m_s} \cdot \frac{\partial f}{\partial \mathbf{v}}=\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}}
+\label{eq:Vlasov}
+\end{equation}
+
+\begin{equation}
+    \textbf{v}=v_{||}\hat{b}+\textbf{v}_D+\textbf{v}_E
+\end{equation}
+
+Where $\textbf{v}_E$ is $\textbf{E}\times \textbf{B}$ drift and $\textbf{v}_D$ is curvature drift.
+
+Electric field can be expressed in terms of potential. Take one Fourier component of the expression $e^{i\textbf{kx}-i\omega t}$, since $E(\textbf{x},t)=\sum_{\textbf{k}, \omega} E(\textbf{k},\omega, t)e^{i\textbf{kx}-i\omega t}$
+
+\begin{equation}
+    \begin{aligned}
+        \mathbf{E}{}&=-\nabla \phi- \frac{1}{c}\frac{\partial \mathbf{A}_{ \|}}{\partial t}\\
+        &=-i\textbf{k}_{||}\phi +i\frac{\omega}{c}\textbf{A}_{||}-i\textbf{k}_{\perp}\phi\\
+        &=-i\textbf{k}_{||}\phi +i\frac{\omega}{c} \textbf{A}_{||}-i\textbf{k}_{y}\phi
+    \end{aligned}
+\end{equation}
+
+Magnetic field will have perturbed term:
+\begin{equation}
+    \begin{aligned}
+       \hat{b}{}&=\frac{\textbf{B}}{B}\\
+       &\approx\frac{\textbf{B}_0+\nabla \times \textbf{A}_{||}}{B_0}\\
+       &= \frac{\textbf{B}_0+ik_yA_{||}\hat{x}-ik_xA_{||}\hat{y}
+       }{B_0}
+    \end{aligned}
+\end{equation}
+
+The drift velocities are \cite{Vd}
+
+\begin{equation}
+    \begin{aligned}
+      v_E{}&=c\frac{\textbf{E}\times \textbf{B}}{B^2}\\
+      &\approx c\frac{\textbf{E}\times \textbf{B}}{B_0^2}\\
+      &=c\frac{\left(-i\textbf{k}_{||}\phi +i\frac{\omega}{c} \textbf{A}_{||}-i\textbf{k}_{y}\phi\right)
+      \times 
+      \left(\textbf{B}_0+ik_yA_{||}\hat{x}-ik_xA_{||}\hat{y}\right)
+      }{B_0}\\
+      &=-\frac{ik_yc\phi}{B}\hat{x}
+    \end{aligned}
+\end{equation}
+
+\begin{eqnarray}
+     \begin{aligned}
+     \textbf{v}_D{}&=c(v^2_{||}+\frac{1}{2}v^2_{\perp})\frac{m_s}{q_s}\frac{\textbf{R}_c \times \textbf{B}}{R_c^2 B^2}
+     \end{aligned}
+\end{eqnarray}
+
+We assume unperturbed function is Maxwellian distribution. 
+
+\begin{eqnarray}
+     F_{0,s}(v)=\left(\frac{m_s}{2\pi T_s}\right)^{3/2}e^{-m_sv^2/2T_s}.
+\end{eqnarray}
+
+Which obey the equations
+
+\begin{eqnarray}
+     \frac{\partial F_{0,s}}{\partial t}=0\\
+     \begin{aligned}
+     \textbf{v}_{||}\cdot \nabla F_{0,s}{}&=\textbf{v}_{||}(\frac{\nabla n_{0}}{n_{0}}+\left(-\frac{3}{2}+\frac{v_{\perp}^{2}+v_{ \|}^{2}}{2 v_{t h}^{2}}\right)
+     \frac{\nabla T_{0}}{T_{0}})\\
+     &=\hat{r}(\nabla F_0) \left(v_{||}\frac{\textbf{B}_0+ik_yA_{||}\hat{x}-ik_xA_{||}\hat{y}
+       }{B}\right)\\
+     &=\frac{iA_{||}v_{||}}{B}\left(k_y\hat{r}\cdot\hat{x}-k_x\hat{r}\cdot\hat{y}\right)\nabla F_0
+     \end{aligned}\\
+     \begin{aligned}
+     v_D\nabla F_0{}&=c(v^2_{||}+\frac{1}{2}v^2_{\perp})\frac{m_s}{q_s}\frac{\textbf{R}_c \times \textbf{B}}{R_c^2 B^2}
+     \hat{R}_c(\frac{\nabla n_{0}}{n_{0}}+\left(-\frac{3}{2}+\frac{v_{\perp}^{2}+v_{ \|}^{2}}{2 v_{t h}^{2}}\right)
+     \frac{\nabla T_{0}}{T_{0}})\\
+     &=0
+     \label{eq:vdf}
+     \end{aligned}\\
+    \frac{\partial F_0}{\partial \textbf{v}} =-\textbf{v}\frac{F_0}{T_s}
+\end{eqnarray}
+
+Here is the list of ordering
+
+$0_{th}$ order term: $F_0$, $B_0$, $v_{||}$, $\textbf{A}_{\perp}$, $v_D$
+
+$1_{st}$ order term: $h_s$, $\phi$, $A_{||}$, $v_{\perp}$, $\textbf{vA}$, $v_E$
+
+Since $F_0 \propto e^{-\frac{mv^2}{2T}}$, then we have $\frac{\partial F_0}{\partial \mathbf{v}} =- \frac{m\textbf{v}}{T}F_0$, with $\textbf{F}=q_s(\textbf{E}+\textbf{v}\times \textbf{B})$ and $\textbf{v}\cdot (\textbf{v} \times \textbf{B})=0$. We have, 
+
+\begin{equation}
+    \frac{\mathbf{F}}{m_s} \cdot \frac{\partial F_0}{\partial \mathbf{v}} = -\frac{q_s\textbf{E}\cdot \textbf{v}}{T_s}F_0
+\end{equation}
+
+Plug into Equation\ref{eq:bolt}
+
+\begin{eqnarray}
+    \begin{aligned}
+     \frac{\partial f}{\partial t} =\frac{\partial \delta f}{\partial t}
+     \end{aligned}\\
+     \begin{aligned}
+     \textbf{v}\nabla f {}&=  (v_{||}\hat{b}+\textbf{v}_D+\textbf{v}_E) \nabla(F_0+\delta f)\\
+     &=(\textbf{v}_{||}+\textbf{v}_D+\textbf{v}_E) \nabla F_0 + (\textbf{v}_{||} +\textbf{v}_D)\nabla \delta f
+     \end{aligned}\\
+     \begin{aligned}
+        \frac{\mathbf{F}}{m_s} \cdot \frac{\partial f}{\partial \mathbf{v}}{}&=-\frac{q\textbf{E}\cdot \textbf{v}}{T}F_0\\
+        &=-(E_{||}v_{||}+v_D E_{\perp}+c\textbf{E} \cdot \frac{\textbf{E}\times \textbf{B}}{B^2})\frac{q_sF_0}{T_s}\\
+        &=-(E_{||}v_{||}+v_D E_{\perp})\frac{q_sF_0}{T_s}
+     \end{aligned}
+\end{eqnarray}
+
+Using gyrokinetic scaling approximation, from Equation \ref{eq:vdf} $\textbf{v}_D\nabla F_0\rightarrow0$
+
+Sum all the terms together
+
+\begin{equation}
+    \frac{\partial \delta f}{\partial t}
+    +(\textbf{v}_{||}+\textbf{v}_E) \nabla F_0 
+    + (\textbf{v}_D+\textbf{v}_{||})\nabla \delta f
+    -(E_{||}v_{||}+E_{\perp}v_D)\frac{qF_0}{T_s}
+    =\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}}
+    \label{eq:temp21}
+\end{equation}
+
+With the results we got so far
+
+\begin{eqnarray}
+    \textbf{E}=-i\textbf{k}_{||}\phi +i\frac{\omega}{c} \textbf{A}_{||}-i\textbf{k}_{y}\phi\\
+       \hat{b}= \frac{\textbf{B}_0+ik_yA_{||}\hat{x}-ik_xA_{||}\hat{y}
+       }{B_0}\\
+    \textbf{v}_{||}\nabla F_0=\frac{iA_{||}v_{||}}{B}\left(k_y\hat{r}\cdot\hat{x}-k_x\hat{r}\cdot\hat{y}\right)\nabla F_0\\
+    \frac{\mathbf{F}}{m_s} \cdot \frac{\partial f}{\partial \mathbf{v}}{}=-(E_{||}v_{||}+v_D E_{\perp})\frac{q_sF_0}{T_s}\\
+    \textbf{v}_{E}=-\frac{ik_yc\phi}{B}\hat{x}
+\end{eqnarray}
+
+Substitute into Equation \ref{eq:temp21}, add into the gyro-averaging factor, $J_0(k_\perp \rho_s)$
+
+\begin{equation}\begin{aligned}
+    -i\omega \delta f +
+    \left(
+    -\frac{ik_{y}c\phi\hat{x}\hat{r}}{B} 
+    +\frac{iA_{||}v_{||}}{B}\left(k_y\hat{r}\cdot\hat{x}-k_x\hat{r}\cdot\hat{y}\right)
+    \right)
+    v_{||}J_0(k_\perp \rho_s)\nabla F_0 
+    +\\
+    (i\textbf{kv}_D 
+    + ik_{||}v_{||})\delta f
+    +(ik_{||}v_{||}\phi+ik_yv_D\phi -i\frac{\omega}{c} A_{||}v_{||})J_0(k_\perp \rho_s)\frac{q_sF_0}{T_s}
+    =\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}}
+    \label{eq:temp22}
+\end{aligned}\end{equation}
+
+If we assume the $\nabla n_0 \hat{r}=\nabla n_0 \hat{x}$,
+
+\begin{equation}\begin{aligned}
+    -i\omega \delta f +
+    \left(
+    -\frac{ik_{y}c\phi}{B} 
+    +\frac{iA_{||}v_{||}k_y}{B}
+    \right)J_0(k_\perp \rho_s)
+    \nabla F_0 
+    +
+    (i\textbf{kv}_D 
+    + ik_{||}v_{||})J_0(k_\perp \rho_s)\delta f\\
+    +(ik_{||}v_{||}\phi+ik_yv_D\phi -i\frac{\omega}{c} A_{||}v_{||})J_0(k_\perp \rho_s)\frac{q_sF_0}{T_s}
+    =\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}}
+    \label{eq:temp22}
+\end{aligned}\end{equation}
+
+With the definition of the following quantities:
+
+\begin{eqnarray}
+    \omega_{*n}=\frac{k_ycT_s}{q_sB}\frac{\nabla n_s}{n_s}, \\
+    \omega_{*T}=\frac{k_ycT_s}{q_sB}\frac{\nabla T_s}{T_s}, \\
+    \omega_{*}^{Tot} = \omega_{*n}+(-\frac{3}{2}+\frac{v_{\perp}^2+v_{\parallel}^2}{2v_{th}^2})\omega_{*T},\\
+    \omega_D=\textbf{kv}_D=-k_{y}\frac{v_{\perp}^2/2+v_{\parallel}^2}{R_c\Omega}
+\end{eqnarray}
+
+Where $\Omega=\frac{mvc}{qB}$
+
+We have
+
+\begin{equation}
+\begin{aligned}
+    \nabla F_0&=\left[\frac{\nabla n_s}{n_s}+(-\frac{3}{2}+\frac{v_{\perp}^2+v_{\parallel}^2}{2v_{th}^2})\frac{\nabla T_s}{T_s}\right]F_0\\
+    &=\frac{q_sB}{k_ycT_s}\omega^*_{tot}F_0\hat{x}
+\end{aligned}
+\end{equation}
+
+Substitute into Equation \ref{eq:temp22}, and multiply $i$ on both sides:
+
+\begin{equation}
+    (\omega -\omega_D 
+    - k_{||}v_{||})\delta f
+    +\left[\omega_{*}^{tot}\frac{q_s\phi}{T_s}+
+    (\omega -\omega^{tot}_*)\frac{q_s A_{||}v_{||}}{cT_s}-(k_{||}v_{||}+\omega_D)\frac{q_s\phi}{T_s}\right]J_0(k_\perp \rho_s)F_0
+    =i\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}}
+    \label{eq:temp23}
+\end{equation}
+
+%Plug in $\delta f=F_0\left(\frac{q_s\textbf{v}\cdot \textbf{A}}{cT_s}-\frac{q_s\phi}{T_s} \right)+h_s$
+
+Plug in $\delta f=-\frac{q_s\phi}{T_s}F_0+h_s$
+
+\begin{equation}
+\begin{aligned}
+    (\omega -\omega_D 
+    - k_{||}v_{||})\left[F_0\left(-\frac{q_s\phi}{T_s} \right)+h_s\right]
+    +\\
+    \left[\omega_{*}^{tot}\frac{q_s\phi}{T_s}+
+    (\omega-\omega^{tot}_*) \frac{q_s A_{||}v_{||}}{cT_s}-(k_{||}v_{||}+\omega_D)\frac{q_s\phi}{T_s}\right]J_0(k_\perp \rho_s)F_0
+    =i\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}}
+\end{aligned}
+\end{equation}
+
+After some algebra, we are left with 
+
+\begin{equation}
+\begin{aligned}
+     (\omega -\omega_D 
+    - k_{||}v_{||})h_s 
+    -(\omega -\omega_*^{tot})\frac{q_s\phi J_0(k_\perp \rho_s)}{T_s}F_0\\
+    +(\omega -\omega_*^{tot})\frac{q_sA_{||}v_{||}J_0(k_\perp \rho_s)}{cT_s}F_0
+    =i\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}}
+    \end{aligned}
+\end{equation}
+
+If we assume $i\left(\frac{\partial f}{\partial t}\right)_{\mathrm{coll}} = i\nu(h_s) h_s$, then we can obtain the following expression
+
+\begin{equation}
+    h_s (\textbf{v},\textbf{X},t)
+    =\frac{\omega -\omega_*^{tot} 
+    }{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}\left(\frac{q_s\phi}{T_s}-\frac{q_sA_{||}v_{||}}{cT_s}\right)J_0(k_\perp \rho_s)F_0
+    \label{eq:linear}
+\end{equation}
+
+From Section \ref{sec:gyro}, it is easy to recover the equation without the limit that we took at the beginning of the section $k_\perp \rho_s \ll 1$
+
+In $\textbf{x}$ space:
+
+\begin{equation}
+\begin{aligned}
+    \delta f_s(\textbf{v},\textbf{x},t){}&= -\frac{q_s\phi}{T_s}F_{0,s}(v)+h_s(\textbf{v},\textbf{X},t)J_0(k_\perp \rho_s)\\
+    &=-\frac{q_s\phi}{T_s}F_{0,s}(v)+\frac{\omega -\omega_*^{tot} 
+    }{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu[h_s]}\left(\frac{q_s\phi}{T_s}-\frac{q_sA_{||}v_{||}}{cT_s}\right)J_0^2(k_\perp \rho_s)F_{0,s}(v)
+\end{aligned}
+\end{equation}
+
+Transform to guiding center space:
+
+\begin{equation}
+\begin{aligned}
+    \delta f_s(\textbf{v},\textbf{x},t){}&=
+    \frac{1}{2\pi \rho_s}\oint d \textbf{l}
+    \frac{1}{2\pi \rho_s}\oint d \textbf{l}'
+    \delta f_s(\textbf{v},\textbf{x},t)e^{i\textbf{k}(\textbf{x}-\textbf{r}+\textbf{r}')}\\
+    &=\frac{1}{2\pi}\int ^{2\pi}_{0}d \theta
+    \frac{1}{2\pi}\int ^{2\pi}_{0}d \theta'
+    \delta f_s(\textbf{v},\textbf{x},t)
+    e^{i\textbf{kx}}e^{ik_\perp rcos\theta - ik_\perp rcos\theta'}
+    \\
+    &=<\sum_{k_x,k_y}\left[ -\frac{q_s\phi}{T_s}F_{0,s}+h_s(k_x, k_y)
+    \right]J_0(k_\perp\rho_s)>\\
+    &=\sum_{k_x,k_y}\left[ -\frac{q_s\phi}{T_s}F_{0,s}+h_s(k_x, k_y)
+    \right]J_0^2(k_\perp\rho_s)\\
+    &=-\frac{q_s\phi}{T_s}F_{0,s}+\frac{\omega -\omega_*^{tot} 
+    }{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}\left(\frac{q_s\phi}{T_s}-\frac{q_sA_{||}v_{||}}{cT_s}\right)J_0^2(k_\perp\rho_s)F_{0,s}
+\end{aligned}
+\end{equation}
+
+Finally, we have
+
+\begin{equation}
+\begin{aligned}
+    \delta f_s(\textbf{v},\textbf{x},t){}&=-\frac{q_s\phi}{T_s}F_{0,s}+\frac{\omega -\omega_{*,s}^{tot} 
+    }{\omega -\omega_{D,s}
+    - k_{||,s}v_{||}-i\nu(h_s)}\left(\frac{q_s\phi}{T_s}-\frac{q_sA_{||}v_{||}}{cT_s}\right)J_0^2(k_\perp\rho_s)F_{0,s}
+\end{aligned}
+\label{eq:linear}
+\end{equation}
+
+\section{Dispersion relation}
+
+The general scheme to get dispersion relation is imposing quasi-neutrality. For more information, please refer to Section \ref{sec:debye}. 
+
+\begin{equation}
+    \rho_{tot}=\sum_{s} q_s\int d\textbf{v} \delta f_s=0
+    \label{eq:rho=0}
+\end{equation}
+
+From Continuity equation $\frac{\partial \rho}{\partial t}+\nabla \cdot \textbf{j}=\sigma$, where $\sigma$ is source or sink. So for no source or sink. $\frac{\partial \rho}{\partial t}+\nabla \cdot \textbf{j}=0$ 
+
+\begin{equation}
+    \textbf{kJ}=\omega \rho_{tot} =0
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+    \textbf{kJ}{}&=\sum_{s} q_s\textbf{k}\int d\textbf{v} \delta f_s \textbf{v}=0
+    \label{eq:j=0}
+\end{aligned}
+\end{equation}
+
+\section{Electric-static Environment}
+
+With $A_{||}=0$, Equation \ref{eq:linear} becomes:
+
+\begin{equation}
+    h_s 
+    =\frac{\omega -\omega_*^{tot}}{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}\frac{q_s\phi}{T_s}J_0^2(k_\perp\rho_s)F_0
+    \label{eq:linear_es}
+\end{equation}
+
+When dealing with ion scale ($k_\perp \rho_i ~ 1$) instabilies, one always take the $J^2_0(k_\perp \rho_e) \approx 1$
+
+\begin{equation}
+    h_s 
+    =\frac{\omega -\omega_*^{tot}}{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}\frac{q_s\phi}{T_s}F_0
+    \label{eq:linear_es}
+\end{equation}
+
+\section{Magnetic Environment}
+
+With $\phi=0$, Equation \ref{eq:linear} becomes:
+
+\begin{equation}
+    h_s 
+    =
+    -\frac{\omega -\omega^{tot}_*}{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}\frac{q_sA_{||}v_{||}}{cT_s}J_0^2(k_\perp\rho_s)F_0
+    \label{eq:linear_em}
+\end{equation}
+
+\begin{equation}
+    h_s 
+    =
+    -\frac{\omega -\omega^{tot}_*}{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}\frac{q_sA_{||}v_{||}}{cT_s}F_0
+    \label{eq:linear_em}
+\end{equation}

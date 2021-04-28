@@ -1,0 +1,97 @@
+With the knowledge of the Tearing mode, one can compare the Tearing mode with Micro Tearing mode (MTM).
+
+
+From Ohm's Law 
+
+\begin{equation}
+    j_{||}=\sigma E = \sigma \frac{\gamma}{c} A_{||}
+\end{equation}
+
+Let's start from the quasi-neutrality argument.
+
+\begin{eqnarray}
+    \nabla J_{||} \approx \nabla \frac{\textbf{B}}{B} \textbf{J}=0\\
+    \nabla (\frac{\textbf{B}_0+\delta \textbf{B}}{B})(\textbf{J}_0+\delta \textbf{J})=0
+\end{eqnarray}
+
+Recall 
+\begin{eqnarray}
+    \nabla(\textbf{J} \cdot \textbf{B}) \equiv \textbf{J} \times(\nabla \times \textbf{B})+(\textbf{J} \cdot \nabla) \textbf{B}+\textbf{B} \times(\nabla \times \textbf{J})+(\textbf{B} \cdot \nabla) \textbf{J}\\
+    \nabla \times \mathbf{B}=\mu_{0}\left(\mathbf{J}+\varepsilon_{0} \frac{\partial \mathbf{E}}{\partial t}\right)\\
+    \nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t}
+\end{eqnarray}
+
+Then we only left with the dotted terms, 
+
+\begin{equation}
+    (\frac{\delta \textbf{B}}{B} \nabla )\textbf{J}_0+(\frac{\textbf{B}_0}{B} \nabla) \delta \textbf{J}=0
+\end{equation}
+
+Since $(\frac{\textbf{B}_0}{B} \nabla) = i \textbf{k}_{||}$
+
+\begin{equation}
+    (\frac{\delta \textbf{B}}{B} \nabla )\textbf{J}_0+ik_{||}\delta J_{||}=0
+\end{equation}
+
+From the Chapter \ref{ch:MTM}
+
+\begin{eqnarray}
+    (\frac{\partial^2}{\partial x ^2} -k_{y}^2)\delta A_{||}=-\frac{4\pi}{c} j_{||}
+\end{eqnarray}
+
+With Cylindrical coordinate and $k_y=\frac{m}{r}$ (From Equation \ref{eq:k_slab}) we have
+
+\begin{eqnarray}
+    \frac{1}{r}\frac{d}{dr}(r\frac{d \delta A_{||}}{dr}) -\frac{m^2}{r^2} \delta A_{||}=\frac{4\pi}{c} \delta j_{||}= \frac{4\pi}{c}\frac{\delta B_r}{B}\frac{\nabla j_0}{ik_{||}}\\
+    \frac{1}{r}\frac{d}{dr}(r\frac{d \delta A_{||}}{dr}) -\frac{m^2}{r^2} \delta A_{||}=\frac{m}{r}\frac{\delta A_{||}}{k_{||}}\frac{\partial j_0}{\partial r} \frac{4\pi}{c}
+\end{eqnarray}
+
+Since $\delta B\approx \delta Ak_y$
+
+\begin{eqnarray}
+    \frac{1}{r}\frac{d}{dr}(r\frac{d \delta A_{||}}{dr}) -\frac{m^2}{r^2} \delta A_{||}=\frac{4\pi}{c} \delta j_{||}= \frac{4\pi}{c}\frac{\delta B_r}{B}\frac{\nabla j_0}{ik_{||}}\\
+    \frac{1}{r}\frac{d}{dr}(r\frac{d \delta A_{||}}{dr}) -\frac{m^2}{r^2} \delta A_{||}=\frac{m}{r}\frac{\delta A_{||}}{k_{||}}\frac{\partial j_0}{\partial r} \frac{4\pi}{c}
+\end{eqnarray}
+
+Recall the common way to solve Boundary Condition problem in electrodynamics, 
+$\delta A \propto r^{\pm m} $ is the solution to the problem. In order to make the function converge, we have 
+
+\begin{eqnarray}
+    \delta A = A_0 r^\alpha \ \ \ \ \ r>0\\
+    \delta A = A_1 r^{-\alpha} \ \ \ \ \ r>r_{max}
+\end{eqnarray}
+
+To keep $\delta A$ analytical, we will determine the function in between using $\frac{dA}{dx}^{l}_{-l}$
+
+
+\begin{eqnarray}
+    j_{||} ~ \frac{1}{k_{||}}
+\end{eqnarray}
+
+By changing the profile of the current, one can avoid the tearing mode. 
+
+However neoclassical tearing mode is hard to avoid. 
+
+\section{Ohm's Law}
+
+\begin{equation}
+    \begin{aligned}
+    \frac{1}{\sigma_{||}} j_{||}=\nabla_{||} \phi -\frac{1}{c}\frac{\partial A_{||}}{\partial t}=E_{||}\\
+    \end{aligned}
+\end{equation}
+
+With Flux surface average $<Q>=\frac{1}{L}\int dl Q$, where $dl$ is following the field line. Since $<\nabla_{||} \phi>=\frac{\phi|^L_0}{L}=0$.
+
+\begin{equation}
+    \begin{aligned}
+     \frac{1}{\sigma_{||}}<j_{||}>=-\frac{1}{c}<\frac{\partial A_{||}}{\partial t}>\\
+     \delta A_{||}\approx -
+    \end{aligned}
+\end{equation}
+
+$\Delta A=\Delta x j_{||}$
+
+$\Delta x_{island} ~ A^{1/2}$
+
+$\Delta x_{island} ~ t^{1/2}$ Which is Rutherford Theory
+

@@ -1,0 +1,100 @@
+\section{H mode plasma}
+
+\subsection{Higher core temperature}
+For ITG-like modes, there is a critical gradient that once exceeded, the mode will be unstable. Therefore, at the steady state. we will have
+
+\begin{equation}
+    \frac{R}{L_{T}}=R \frac{1}{T}\frac{dT}{dr}
+\end{equation}
+
+Where $L_T$ is the critical gradient. The differential equation can solved easily which gives us. 
+
+\begin{equation}
+    T=T_0 e^{-(r-r_0)/L_T}
+\end{equation}
+
+For $r_0$ located at the top of the pedestal, we plug in $r=r_0$, then we have
+
+\begin{equation}
+    T=T_0
+\end{equation}
+
+Therefor the $T_0$ is the temperature of the top of the pedestal if $r=r_0$. 
+
+From this point of view, The top of the pedestal will set the the temperature of the core. If the the pedestal is twice as high, then the core temperature will be roughly twice as high. 
+
+\subsection{Confinement time}
+
+Confinement time can be expressed as 
+
+\begin{equation}
+    \tau=\frac{E_{store}}{P_{input}}=\frac{3nT/2}{P} 
+\end{equation}
+
+For H-mode, if the core temperature is higher then the stored energy will higher, then the confinement time will longer. 
+
+\subsection{Flat core profile}
+
+For ITG-like mode, the transport is propotional to $T^{5/2}$. Therefore the profile will become more flat. 
+
+\section{Diffusivity}
+
+The definition of the particle diffusivity is (Fick's law on page 148) \cite{Chen}
+
+\begin{eqnarray}
+D_s = \Gamma_s(\frac{dn_s}{dx})^{-1}
+\end{eqnarray}
+
+Where $\Gamma_s$ is the flux of the species.
+
+From the fluid equation of motion
+
+\begin{equation}
+    mn\frac{d\textbf{v}}{dt}=mn[\frac{\partial \textbf{v}}{\partial t}+(\textbf{v}\nabla)\textbf{v}]=\pm en \textbf{E}-\nabla p-mn\nu \textbf{v}
+\end{equation}
+
+For a steady state with small velocity, we can reduce the the equation into the following form: 
+
+\begin{equation}
+    \textbf{v}=\frac{1}{mn\nu}(\pm en \textbf{E}-\nabla p)
+\end{equation}
+
+With the definition of flux $\Gamma = n\textbf{v}$
+
+We have
+
+\begin{equation}
+    \Gamma=\frac{1}{m\nu}(\pm en \textbf{E}-\nabla p)
+\end{equation}
+
+With the defination of the diffusivity $D=\frac{KT}{m\nu}$, and mobility $\mu=\frac{e}{m\nu}$, we arrive to the following equation.
+
+\begin{equation}
+    \Gamma =\pm \mu n \textbf{E} -D\nabla n 
+\end{equation}
+
+
+
+The definition of the heat diffusivity is
+
+\begin{eqnarray}
+\chi_s = (Q_s-\frac{3}{2}T_s\Gamma_s)(n_s \frac{dT_s}{dx})^{-1}
+\end{eqnarray}
+
+\subsection{Plasma parameter}
+
+\begin{equation}
+    g=\frac{1}{n_0\lambda_D}
+\end{equation}
+
+Where $\lambda_D=(\frac{kT}{8\pi n e^20})^{1/2}$
+
+\section{Classical Transport}
+
+\section{Neoclassical Transport}
+
+Neoclassical transport is classical transport taking the effect of the device geometry. Effectively k=0 
+
+\section{Anomalous Transport}
+
+Anomalous transport is contributed by the turbulence. $k\neq 0$ 

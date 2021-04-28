@@ -1,0 +1,367 @@
+Recall from Equation \ref{eq:linear} and Equation \ref{eq:rho=0}
+
+\begin{equation}
+    \delta f_s(\textbf{v},\textbf{X},t)=-\frac{q_s\phi}{T_s}F_{0,s}+
+    \frac{\omega -\omega_*^{tot} 
+    }{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}\left(\frac{q_s\phi}{T_s}-\frac{q_sA_{||}v_{||}}{cT_s}\right)J_0^2(k_\perp\rho_s)F_{0,s}
+\end{equation}
+
+\begin{equation}
+\rho_{tot}=\sum_{s} q_s\int d\textbf{v} \delta f=0
+\end{equation}
+
+With two Equations above, with $A_{||}=0$ and $\delta f= h_i + \frac{q_e \phi}{T_e} F_{0,e}+ \frac{q_i \phi}{T_i} F_{0,i}$
+
+\begin{equation}
+\begin{aligned}
+\rho_{tot}{}&=\sum_{s} q_s\int d\textbf{v} \delta f\\
+&=\int d\textbf{v} \left(q_ih_i(\textbf{v},\textbf{X},t) + \frac{q_e^2 \phi}{T_e} F_{0,e}+ \frac{q_i^2 \phi}{T_i} F_{0,i}\right)\\
+&=\int d\textbf{v} \left[q_i
+\frac{\omega -\omega_*^{tot} 
+    }{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}\frac{q_i\phi}{T_s}J_0^2(k_\perp\rho_i)F_{0,i}
++ \frac{q_e^2 \phi}{T_e} F_{0,e}+ \frac{q_i^2 \phi}{T_i} F_{0,i}\right]\\
+\end{aligned}
+\end{equation}
+
+Since $\int F_{0,s}d\textbf{v}=n_s$ and $\rho_{tot}=0$
+
+\begin{equation}
+   \frac{n_e}{T_e} + \frac{n_i }{T_i}+\frac{q_i^2}{q_e^2} \frac{1}{T_i} \int d\textbf{v} \left[
+\frac{\omega -\omega_*^{tot} 
+    }{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]=0
+\label{eq:ITG}
+\end{equation}
+
+For the future calculation, $q_i=e$, $n_i=n_e= $ will be assumed, therefore 
+
+\begin{equation}
+   \frac{1}{T_e} + \frac{1}{T_i}+\frac{1}{T_i} \int d\textbf{v} \left[
+\frac{\omega -\omega_*^{tot} 
+    }{\omega -\omega_D 
+    - k_{||}v_{||}-i\nu(h_s)}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]=0
+\end{equation}
+
+Reall $\omega_{*}^{T o t}=\omega_{* n}+\left(-\frac{3}{2}+\frac{v_{\perp}^{2}+v_{ \|}^{2}}{2 v_{t h}^{2}}\right) \omega_{* T}$ and $\rho_s=\frac{m_sv_\perp}{q_sB}$
+
+\begin{equation}
+\begin{aligned}
+   \frac{1}{T_e} + \frac{1}{T_i}+\frac{1}{T_i} 
+   \int d\textbf{v} \left[
+\frac{1 
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}v_{||}}{\omega}-\frac{i\nu(h_s)}{\omega}}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]
+ \\
+ +\frac{1}{T_i}\frac{\omega_{*n}}{\omega} 
+   \int d\textbf{v} \left[
+\frac{1 
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}v_{||}}{\omega}-\frac{i\nu(h_s)}{\omega}}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]
+ \\
+  -\frac{3}{2}\frac{1}{T_i} \frac{\omega_{*T} }{\omega}
+   \int d\textbf{v} \left[
+\frac{1 
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}v_{||}}{\omega}-\frac{i\nu(h_s)}{\omega}}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]
+  \\
+  +\frac{1}{T_i} \frac{\omega_{*T} }{\omega}
+   \int d\textbf{v} \left[
+\frac{\frac{v_{\perp}^{2}+v_{ \|}^{2}}{2 v_{t h}^{2}} 
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}v_{||}}{\omega}-\frac{i\nu(h_s)}{\omega}}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]
+ =0
+ \end{aligned}
+\end{equation}
+
+Assume $A(\textbf{k},\omega, \omega_D ,\nu)=
+\int d\textbf{v} \left[
+\frac{1 
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}v_{||}}{\omega}-\frac{i\nu(h_s)}{\omega}}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]
+$ and 
+$B(\textbf{k},\omega, \omega_D,\nu)=
+\int d\textbf{v} \left[
+\frac{\frac{v_{\perp}^{2}+v_{ \|}^{2}}{2 v_{t h}^{2}}  
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}v_{||}}{\omega}-\frac{i\nu(h_s)}{\omega}}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]
+$ , After some algebra:
+
+\begin{equation}
+    \frac{1}{T_e}+
+    \frac{1}{T_i}+
+    \frac{1}{T_i}A\left(1+\frac{\omega_{*n}}{\omega}-\frac{3}{2}\frac{\omega_{*T}}{\omega}\right)+\frac{1}{T_i} B\frac{\omega_{*T}}{\omega}=0
+\end{equation}
+
+\section{Analytical approach}
+
+One can solve the equation using some approximation
+
+Assume $\frac{\omega_{D}}{\omega} \ll 1$, $\frac{k_{||}v_{||}}{\omega} \ll 1$ and $\frac{\nu}{\omega} \ll 1$. 
+
+Since $\frac{1}{1-x}=1+x$ for small x.
+
+We have $A(\textbf{k},\omega, \omega_D ,\nu)=
+\int d\textbf{v} \left[
+1 +\frac{\omega_D }{\omega}
+    + \frac{k_{||}v_{||}}{\omega}
+    +\frac{i\nu(h_s)}{\omega}\right]
+    J_0^2(k_\perp\rho_i)F_{0,i}$ 
+    and 
+    $B(\textbf{k},\omega, \omega_D ,\nu)=
+\int d\textbf{v} 
+\frac{v^2_{\perp}+v_{||}^2}{2v_{th}^2}
+\left[
+1 +\frac{\omega_D }{\omega}
+    + \frac{k_{||}v_{||}}{\omega}+\frac{i\nu(h_s)}{\omega}\right]
+    J_0^2(k_\perp\rho_i)F_{0,i}$.
+    For simplicity, we define $A=\alpha_0+\frac{\alpha_1}{\omega}$, where $\alpha_0=\int d\textbf{v} 
+    J_0^2(k_\perp\rho_i)F_{0,i}$ and\\
+    $\frac{\alpha_1}{\omega}=
+    \int d\textbf{v} \left[
+\frac{\omega_D }{\omega}
+    + \frac{k_{||}v_{||}}{\omega}
+    +\frac{i\nu(h_s)}{\omega}\right]
+    J_0^2(k_\perp\rho_i)F_{0,i}$. Similar for B: $B=\beta_0+\frac{\beta_1}{\omega}$, 
+    where 
+    $\beta_0=\int d\textbf{v} \frac{v^2_{\perp}+v_{||}^2}{2v_{th}^2}
+    J_0^2(k_\perp\rho_i)F_{0,i}$ and\\
+    $\frac{\beta_1}{\omega}=
+    \int d\textbf{v} \frac{v^2_{\perp}+v_{||}^2}{2v_{th}^2}
+    \left[
+\frac{\omega_D }{\omega}
+    + \frac{k_{||}v_{||}}{\omega}
+    +\frac{i\nu(h_s)}{\omega}\right]
+    J_0^2(k_\perp\rho_i)F_{0,i}$
+    
+    Only take the $0_{th}$ order and the first order terms, then the dispersion relation becomes, 
+    
+    \begin{eqnarray}
+        \begin{aligned}
+    \frac{1}{T_e}+
+    \frac{1}{T_i}+
+    \frac{1}{T_i}(\alpha_0+\frac{\alpha_1}{\omega})\left(1+\frac{\omega_{*n}}{\omega}-\frac{3}{2}\frac{\omega_{*T}}{\omega}\right)+\frac{1}{T_i}(\beta_0+\frac{\beta_1}{\omega})\frac{\omega_{*T}}{\omega}{}&=0
+    \end{aligned}
+    \end{eqnarray}
+    
+    Now express it into 1, $\frac{1}{\omega}$, $\frac{1}{\omega^2}$. 
+    \begin{eqnarray}
+        \begin{aligned}
+    \left(
+    \frac{1}{T_e}+
+    \frac{1}{T_i}+
+    \frac{\alpha_0}{ T_i}
+    \right)+
+    \frac{1}{\omega}
+    \left[
+    \frac{\alpha_0\omega_{*n}}{T_i}-
+    \frac{3\alpha_0\omega_{*T}}{2 T_i}+
+    \frac{\alpha_1}{T_i}+
+    \frac{\beta_0\omega_{*T}}{T_i}
+    \right]\\
+    +
+    \frac{1}{\omega^2}
+    \left(
+    \frac{\alpha_1\omega_{*n}}{ T_i}-
+    \frac{3\alpha_1\omega_{*T}}{2 T_i}+
+    \frac{\beta_1\omega_{*T}}{T_i}
+    \right)
+    &=0
+    \end{aligned}
+    \end{eqnarray}
+    
+    Then we arrive to a neat expression
+    
+    \begin{equation}
+        a\omega^2+b\omega+c=0
+    \end{equation}
+    
+    Where $a=\left(
+    \frac{1}{T_e}+
+    \frac{1}{T_i}+
+    \frac{\alpha_0}{ T_i}
+    \right)$,
+    $b=\left[
+    \frac{\alpha_0\omega_{*n}}{ T_i}-
+    \frac{3\alpha_0\omega_{*T}}{2 T_i}+
+    \frac{\alpha_1}{ T_i}+
+    \frac{\beta_0\omega_{*T}}{T_i}
+    \right]
+    $,
+    $c=
+    \left(
+    \frac{\alpha_1\omega_{*n}}{ T_i}-
+    \frac{3\alpha_1\omega_{*T}}{2 T_i}+
+    \frac{\beta_1\omega_{*T}}{T_i}
+    \right)
+    $
+    
+    The general solution will be 
+    
+    \begin{equation}
+     \omega=\frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a}
+    \end{equation}
+    
+    \begin{eqnarray}
+        \begin{aligned}
+        \gamma{}&=Im[\omega]\\
+        &=Im[\frac{\sqrt{b^2-4ac}}{2a}]
+        \end{aligned}
+    \end{eqnarray}
+    
+        
+    
+    One can further simplify the equation by making more assumptions,
+    
+    $(k_\perp\rho_i)\rightarrow 0$, $J_0^2(k_\perp\rho_i)\rightarrow 1$, therefore
+    \begin{eqnarray}
+        \begin{aligned} 
+        \alpha_0{}&=\int d\textbf{v}     F_{0,i}\\
+        &=\int^\infty_0 dv \int ^\pi_0 d\theta \int ^{2\pi}_0 d\phi v^2sin\theta (\frac{1}{2\pi})^{3/2}\frac{1}{v_{th}^3}e^{-\frac{v^2}{2v_{th}^2}}\\
+        &=\int^\infty_0 ds \int ^\pi_0 d\theta s^2sin\theta (\frac{1}{2\pi})^{1/2}e^{-\frac{s^2}{2}}\\
+        &=1
+        \end{aligned}
+    \end{eqnarray}
+    and
+    \begin{eqnarray}
+        \begin{aligned} 
+        \beta_0{}&=\int d\textbf{v} \frac{v^2_{\perp}+v_{||}^2}{2v_{th}^2} F_{0,i}\\
+        &=\int^\infty_0 dv \int ^\pi_0 d\theta \int ^{2\pi}_0 d\phi v^2sin\theta (\frac{1}{2\pi})^{1/2}\frac{v^2}{2v_{th}^2}\frac{1}{v_{th}^3}e^{-\frac{v^2}{2v_{th}^2}}\\
+        &=\int^\infty_0 ds (\frac{1}{2\pi})^{1/2}s^4e^{-\frac{s^2}{2}}\\
+        &=\frac{3}{2}
+        \end{aligned}
+    \end{eqnarray}
+    
+    With $\omega_D=\omega_{D0}\left(\mathrm{v}_{ \|}^{2}+\mathrm{v}_{\perp}^{2} / 2\right) / \mathrm{v}_{t h}^{2}$, define $s=\frac{v}{v_{th}}$. $v_{th}=\sqrt{T_i/m_i}$ Recall $F_{0,s}(v)=\left(\frac{m_s}{2\pi T_s}\right)^{3/2}e^{-m_sv^2/2T_s}=(\frac{1}{2\pi})^{3/2}\frac{1}{v_{th}^3}e^{-\frac{v^2}{2v_{th}^2}}$, 
+    
+    Useful formula: $\int^\infty_0 x^ne^{-ax^2}=(\pi/2)^{1/2}(n-1)!!(2a)^{-\frac{n+1}{2}}$ for $n>0$ and even
+    \begin{eqnarray}
+        \begin{aligned}
+        \alpha_1{}&=
+    \int d\textbf{v} \left[\omega_D\left(\mathrm{v}_{ \|}^{2}+\mathrm{v}_{\perp}^{2} / 2\right) / \mathrm{v}_{t h}^{2}
+    + k_{||}v_{||}
+    +i\nu(h_s)\right]
+    J_0^2(k_\perp\rho_i)F_{0,i}\\
+    &=\int^\infty_0dv \int^{\pi}_0 d\theta s^2sin(\theta) [\omega_D s^2(1-\frac{1}{2}sin^2\theta)
+    + k_{||}s v_{th} cos\theta\\
+    &\ \ +i\nu(h_s)]
+    J_0^2(k_\perp\rho_i)(\frac{1}{2\pi})^{1/2}e^{-\frac{s^2}{2}}\\
+    &= 2\omega_{D0}+k_{||}v_{th}\cdot 0 +i\nu
+        \end{aligned}
+    \end{eqnarray}
+    
+    Similarly,
+        \begin{eqnarray}
+        \begin{aligned}
+        \beta_1{}&=
+    \int d\textbf{v} \frac{v^2_{\perp}+v_{||}^2}{2v_{th}^2}\left[\omega_D\left(\mathrm{v}_{ \|}^{2}+\mathrm{v}_{\perp}^{2} / 2\right) / \mathrm{v}_{t h}^{2}
+    + k_{||}v_{||}
+    +i\nu(h_s)\right]
+    J_0^2(k_\perp\rho_i)F_{0,i}\\
+    &=\int^\infty_0dv \int^{\pi}_0 d\theta s^2\frac{s^2}{2} sin(\theta) [\omega_D s^2(1-\frac{1}{2}sin^2\theta)
+    + k_{||}s v_{th} cos\theta\\
+    &\ \ +i\nu(h_s)]
+    J_0^2(k_\perp\rho_i)(\frac{1}{2\pi})^{1/2}\frac{1}{v_{th}}e^{-\frac{s^2}{2}}\\
+    &= 5\omega_{D0}+k_{||}v_{th}\cdot 0 +\frac{i3\nu}{2}
+        \end{aligned}
+    \end{eqnarray}
+    
+    Assume $\nu=0$, plug everything to $b^2-4ac$, then we have:
+    
+    \begin{equation}
+        b^2-4ac=\frac{T_e \left[4 \omega_{D0}^2-4 \omega_{D0} (3  \omega_{*n}+4  \omega_{*T})+ \omega_{*n}^2\right]-8 T_i \omega_{D0} ( \omega_{*n}+ \omega_{*T})}{T_e T_i^2}
+    \end{equation}
+    
+    The equation is still to complicated. Since $\omega_{*n}\gg \omega_{D0}$, $\omega_{*T}\gg \omega_{D0}$, if we assume $\omega_{*n}=0$ and take the first order, then we will have $\alpha_1=\beta_1=0$. with $\alpha_0=0 $ and $\beta_0=\frac{3}{4} $ Then we will have a simple expression for real frequency and growth.
+    
+    \begin{equation}
+        \gamma=\pm \sqrt{\frac{2T_e\omega_{D0}\omega_{*T}}{2T_e+T_i}}
+    \end{equation}
+    
+    
+    \begin{equation}
+        \omega=\frac{-\omega_{*n}}{2(\frac{T_i}{T_e}+2)}
+    \end{equation}
+    
+    
+    
+
+
+\section{Numerical approach}
+
+One can also solve for the frequency and growth rate numerically. 
+
+Solve for $\omega$:
+
+\begin{equation}
+    \omega = \frac{A(\omega_{*n}-\frac{3}{2}\omega_{*T})+B\omega_{*T}}{\frac{ T_e}{T_e+T_i}-A}
+\end{equation}
+
+Solve the equation using spherical coordinates $v_{||}=vcos\theta$, $v_{\perp}=vsin\theta$, $F_{0,s}(v)=\left(\frac{m_s}{2\pi T_s}\right)^{3/2}e^{-m_sv^2/2T_s}$
+
+\begin{equation}
+    \begin{aligned}
+    A(\textbf{k},\omega, \omega_D ,\nu){}&=
+\int d\textbf{v} \left[
+\frac{1 
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}v_{||}}{\omega}-\frac{i\nu[h_i]}{\omega}}J_0^2(k_\perp\rho_i)\left(\frac{m_i}{2\pi T_i}\right)^{3/2}e^{-m_sv^2/2T_i}
+ \right]\\
+ &=
+2\pi \int^\pi_0 d\theta \int ^\infty _0 dv \left[
+\frac{1 
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}s_iv_{i,th}cos\theta}{\omega}-\frac{i\nu[h_i]}{\omega}}J_0^2(k_\perp\rho_i)\left(\frac{v^2_{i,th}}{2\pi T_i}\right)^{3/2}e^{-s_i^2
+    }
+ \right]
+    \end{aligned}
+\end{equation}
+
+Where $s_i=\frac{v}{v_{th,i}}$,Similarly
+
+\begin{equation}
+    \begin{aligned}
+    B(\textbf{k},\omega, \omega_D,\nu){}&=
+\int d\textbf{v} \left[
+\frac{\frac{v_{\perp}^{2}+v_{ \|}^{2}}{2 v_{t h}^{2}}  
+    }{1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}v_{||}}{\omega}-\frac{i\nu(h_s)}{\omega}}J_0^2(k_\perp\rho_i)\left(\frac{m_i}{2\pi T_i}\right)^{3/2}e^{-m_sv^2/2T_i}
+ \right]\\
+ &=
+2\pi \int^\pi_0 d\theta \int ^\infty _0 dv \left[
+\frac{s_i^{2}  
+    }{2\left(1 -\frac{\omega_D }{\omega}
+    - \frac{k_{||}vcos\theta}{\omega}-\frac{i\nu(h_s)}{\omega}\right)}J_0^2(k_\perp\rho_i)F_{0,i}
+ \right]
+    \end{aligned}
+\end{equation}
+
+
+\section{Parameter}
+ITG
+\begin{eqnarray}
+    k_y\rho_i 0.1~0.5
+\end{eqnarray}
+
+\section{$k_{||}v_{||,i}, \omega_{D,i} << \omega$ with low-$k_{\perp}$ Limit}
+\begin{eqnarray}
+    \omega_{D,i}=\vec{k}\vec{v}_D=k_{y}\frac{v_{\perp}^2/2+v_{\parallel}^2}{R\Omega}\\
+    \omega_{D,i}=k_y \frac{v_{\perp}^2/2+v_{\parallel}^2}{v_{\perp}}\\
+    \frac{k_{\perp} v_{||}^2}{v_{\perp}}<<\omega\\
+        (\frac{k_{||}}{k_\perp})^{-1} (\frac{v_{||}}{v_{\perp}})(k_{||} v_{||})<<\omega\\
+    k_{||}v_{||}<<\omega
+\end{eqnarray}
+
+The dispersion relationship is 
+\begin{eqnarray}
+    \omega^3-\omega_{}
+\end{eqnarray}

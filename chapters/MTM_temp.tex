@@ -1,0 +1,218 @@
+
+Magnetic perturbation induce MTM.\\
+
+\begin{eqnarray}
+    \nabla \times \vec{B} = \frac{4\pi }{c} \Vec{J}\\
+    \nabla^2_{\perp} A_{||} \frac{4 \pi }{c} J_{||}
+\end{eqnarray}
+
+In cylinder geometry\\
+
+\begin{eqnarray}
+    \zeta =\frac{z}{2\pi R}\\
+    \vec{B}=B_\zeta \vec{\zeta}+B_\theta \vec{\theta}\\
+    \nabla =\frac{\partial }{\partial z} \hat{z}+ \frac{\hat{\theta}}{r} \frac{\partial }{\partial \theta}\\
+    \vec{B} \nabla =i\frac{n}{R}(1-\frac{m}{n}q(r))
+\end{eqnarray}
+
+where $q=\frac{B_\zeta}{B_\theta}\frac{r}{R}$. 
+
+The vlasov euqation 
+\begin{eqnarray}
+    \detal v_E= c \frac{\delta E \time B}{B^2}\\
+    \frac{\partial \detla f}{\partial t}+v_{||} \frac{B \nabla \delta f}{|B|}+ v_{||}\frac{\detla B }{B} \nabla f_0\\
+    (\omega - k_{||}v_{||})h+C[h]=\frac{qv_{||}}{T_s}\frac{A_{||}}{c} (\omega - \omega_*) f_{M}\\
+    h=
+    J_{||}=\int dv v_{||} \delta f\\
+    \nabla \times \vec{B}=\vec{J}\\
+    k_{||}=\frac{n}{R} (1- \frac{m}{n q(r)})\\
+    q(r)=q(r_0)+(r+r_0)\frac{dq}{dr}\\
+    q(r_0)=\frac{m}{n}\\
+    k_{||}=\frac{n}{R}-\frac{mn}{Rr}\frac{1}{q^2}\frac{dq}{dr} \Delta r\\
+    k_{||}= k_\theta \frac{\delta r}{L_s}\\
+    L_s= \frac{qR}{\hat{s}}\\
+    k_{||}v_{th}~ \omega \nu\\
+    \frac{\Delta }{L_s} k_y v_e ~ \omega_*\\
+    \omega = k_y\rho _s \frac{c_s}{L_p}\\
+    L_p=\frac{1}{P_e}\frac{dp_e}{dr}\\
+    c_s=\sqrt{\frac{T_e}{m_i}}\\
+    \Delta r ~ \frac{L_s}{L_p}\rho_e
+\end{eqnarray}
+
+For core, $\frac{R}{L_p}~5-10$\\
+
+
+GENE parameter
+\begin{eqnarray}
+    \hat{s}=1\\
+    \alpha=q^2 R \frac{d\beta }{dr}\\
+    \alpha=q^2 \frac{R}{L} \beta \\
+    \beta = 2\beta_e \\
+    \beta = 2q^2\frac{R}{L}\beta_e\\
+    \alpha =3\\
+    q=4\\
+    \frac{R}{L}=40(core)
+    \frac{R}{L}=160 (pedestal)\\
+    \eta =1.5\\
+    omn=64\\
+    omt=96\\
+    k_(Y,min)=k_{y,\rho}=0.1\\
+    nxo=29
+\end{eqnarray}
+
+Finguer print for MTM
+\begin{eqnarray}
+    \frac{Q_{em}}{Q_{es}}>>1
+\end{eqnarray}
+
+\begin{equation}
+    \frac{\partial f_s}{\partial t} + (v_{\parallel}\hat{b}+\textbf{v}_E+\textbf{v}_D)\cdot\nabla f_s + [q_s\textbf{E}\cdot(v_{\parallel}\hat{b}+\textbf{v}_D)]\frac{\partial f_s}{\partial \epsilon}=0
+\label{eq:dke}
+\end{equation}
+
+\begin{eqnarray}
+     i\omega f + i \textbf{k v} f + q \textbf{Ev} \frac{f}{\epsilon}=C
+\end{eqnarray}
+\begin{eqnarray}
+     \textbf{v}=v_{||}\\
+     (-i\omega +ik_{||}v_{||})\delta f=-\detal v \nabla F_0 -\frac{e}{m} \delta E_{||} \frac{df }{d x_{||}}\\
+     \detal f =\frac{1}{-i\omega +ik_{||}v_{||}}(-\detal v \nabla F_0 -\frac{e}{m} \delta E_{||} \frac{df }{d x_{||}})\\
+     <cos^2(\omega t)>=\frac{1}{2}\\
+     \frac{d<f>}{dt}=\frac{\detal v \nabla <f>}{i\omega -k_{||}v_{||}}\\
+     f~ e^{-n(\zeta -q \theta)}\\
+     k_{\perp}-n\nabla(\zeta -q \theta)\\
+     <\detal v \nabla f>=0\\
+     <v \nabla \delta f>=0\\
+     \int dx \longrightarrow \int dx \int dk \deta v_k e^{ikx}\delta v_k \int dk \delta f_{k'}\\
+     \int dk i\frac{\delta v_k \delta v_k \nabla f_0}{\omega - k_{||}v_{||}}\\
+     D=\int dk i\frac{\delta v_k \delta v_k }{\omega - k_{||}v_{||}}\\
+\end{eqnarray}
+Quasi linear\\
+\begin{eqnarray}
+     <\delta v \nabla \delta f>= \nabla <\delta v  \delta f>\\
+     <\delta v  \delta f>=\Tau 
+\end{eqnarray}
+The dominant $\delta v$\\
+\begin{eqnarray}
+     MTM: \delta v=v_{||}; \delta n= v_{||}\frac{\delta B}{B}\\
+     ITG: \delta v= v_{E\times B}=c\frac{c B \times \delta E}{B^2}\\
+\end{eqnarray}
+MTM particle flux
+$\int dv \Tau = \int dv v_{||}\delta n \delta f$\\
+$=\delta n \int dv v_{||}\delta f_{||}$\\
+$=\frac{\delta B}{B} \delta j_{||}$\\
+For heat flux
+\begin{eqnarray}
+     Q=\int dx \Tau \frac{1}{2} m v^2\\
+     =\int v_{||}\frac{\delta B}{B} \delta f \frac{1}{2}mv^2\\
+     =\frac{\delta B}{B}\int v_{||} \delta f \frac{1}{2}mv^2\\
+     =\frac{\delta B}{B} \delta q_{||}\\
+     =~(\frac{\delta B}{B})^2 \frac{\nabla f_0}{\omega}\nabla T\\
+     D=~(\frac{\delta B}{B})^2 \nabla T\frac{v_{th}^2}{\omega}
+\end{eqnarray}
+Analysis the B field
+\begin{eqnarray}
+     \delta B=\nabla \times \delta A\\
+     \nabla ^2 \delta A= \frac{k}{c} j_{||}
+\end{eqnarray}
+For test particle with distribution of g\\
+\begin{eqnarray}
+     \frac{dg}{dt} + \hat{n} \nabla g=0\\
+     D~\frac{\delta n^2}{k_{||}}\\
+     D_M~ \pi L_s(\frac{\delta B}{B})^2\\
+     \frac{\delta B}{B}~10^{-4}
+\end{eqnarray}
+
+Both give us real number, which means we will have no instability on non-collisional or fully collisional limit. But there will be instablities arises in between which we will try to solve semi-analytically. 
+
+We can do Tylor Expansion as following
+\begin{eqnarray}
+     \frac{1}{1-x}=\sum^\infty_{i=0} x^i\\
+     A \propto \int ^\infty _0 \frac{v^8}{1+i\frac{v^3\omega}{\nu_0v_{th}^3}}dv\\
+     %A \propto \int ^{\infty}_0 \sum^\infty_{n=0} (i\frac{\nu_0 v_{th}^3}{\omega})^nv^{5-3n}e^{-m_sv^2/2T_s}dv\\
+     A \propto \int ^{\infty}_0 \sum^\infty_{n=0} (\frac{\omega}{i\nu_0 v_{th}^3})
+     ^nv^{8+3n}e^{-m_sv^2/2T_s}dv\\
+     B \propto \int ^{\infty}_0 \sum^\infty_{n=0} \frac{1}{2v^2_{th}}(\frac{\omega}{i\nu_0 v_{th}^3})
+     ^nv^{10+3n}e^{-m_sv^2/2T_s}dv-\frac{3}{2}A
+\end{eqnarray}
+
+Recall the Gaussian integral, 
+\begin{eqnarray}
+     \int ^{\infty}_0 v^n\cdot e^{-mv^2/T}dv=\frac{1}{2} (\frac{m}{T})^{-\frac{1+n}{2}} \Gamma[\frac{n+1}{2}]\\
+     A \propto \frac{1}{2} \sqrt{\frac{T}{m}} \sum^\infty_{n=0} (\frac{\omega}{i\nu_0 v_{th}^3}\sqrt{\frac{T}{m}})
+     ^{n}   \Gamma[\frac{3n+9}{2}]\\
+     B \propto \frac{1}{2} \frac{1}{2v^2_{th}} (\sqrt{\frac{T}{m}})^2 \sum^\infty_{n=0} (\frac{\omega}{i\nu_0 v_{th}^3}\sqrt{\frac{T}{m}})
+     ^{n}   \Gamma[\frac{3n+11}{2}]
+     -\frac{3}{2}A\\
+     \frac{B}{A}=\frac{\sum^\infty_{n=0} \alpha
+     ^{n}  \Gamma[\frac{3n+11}{2}]
+     -\frac{3}{2}A
+     }
+     {2\sum^\infty_{n=0} \alpha
+     ^{n}  \Gamma[\frac{3n+9}{2}]}\\
+     \frac{B}{A}=\frac{\sum^\infty_{n=0} \alpha
+     ^{n}  \Gamma[\frac{3n+11}{2}]
+     }
+     {2\sum^\infty_{n=0} \alpha
+     ^{n}  \Gamma[\frac{3n+9}{2}]}-\frac{3}{2}
+     %\\     \Gamma(z)=\int^\infty _0 x^{z-1}e^{-x}dx\\
+     %\Gamma(z+1)=z\Gamma(z)
+\end{eqnarray}
+
+Where $\alpha=\frac{\omega}{i\nu_0 v_{th}^3}\sqrt{\frac{T}{m}}=\frac{\omega}{i\nu_0 v_{th}^2}$
+
+Recall from Equation \ref{eq:omega}, we now have a better looking equation
+\begin{eqnarray}
+     i\nu_0v_{th}^2\alpha=\omega_{*n}+\frac{\sum^\infty_{n=0} \alpha
+     ^{n}  \Gamma[\frac{3n+11}{2}]
+     }
+     {2\sum^\infty_{n=0} \alpha
+     ^{n}  \Gamma[\frac{3n+9}{2}]}-\frac{3}{2}\omega_{*T}
+     \label{eq:MTM-Z}
+\end{eqnarray}
+
+Recall $f\propto e^{-i\omega t} $, then we get $\omega=\omega_r+i\gamma$. We can divid the Equation \ref{eq:MTM-Z} into to part- real and imaginary
+
+\begin{eqnarray}
+     -\frac{\omega_r}{\nu_0v_{th}^2}=\omega_{*n}-\frac{3}{2}\omega_{*T}+Re(\frac{B}{A})\\
+     \frac{\gamma}{\nu_0v_{th}^2}=Im(\frac{B}{A})
+\end{eqnarray}
+
+
+One can calculate the result numerically, the code for Mathematica is listed in Appendix. 
+
+First, let's assume the right hand side $\omega$ is independent of left hand side's $\omega$. 
+
+The plot is shown below as Figure \ref{fig:MTM} Figure \ref{fig:MTM2} Figure \ref{fig:MTM3} Figure \ref{fig:MTM4}. As we can see, with better and better $\alpha$ resolution. we ended up with a 
+
+\begin{figure}[h] \centering
+        \includegraphics[width=1\textwidth]{Image/MTM_growth.jpg}
+        \caption{The growth rate of MTM}
+        \label{fig:MTM}
+\end{figure}
+
+\begin{figure}[h] \centering
+        \includegraphics[width=1\textwidth]{Image/MTM_growth2.jpg}
+        \caption{The growth rate of MTM2}
+        \label{fig:MTM2}
+\end{figure}
+
+\begin{figure}[h] \centering
+        \includegraphics[width=1\textwidth]{Image/MTM_growth3.jpg}
+        \caption{The growth rate of MTM3}
+        \label{fig:MTM3}
+\end{figure}
+
+\begin{figure}[h] \centering
+        \includegraphics[width=1\textwidth]{Image/MTM_growth3.jpg}
+        \caption{The growth rate of MTM3}
+        \label{fig:MTM3}
+\end{figure}
+
+\begin{figure}[h] \centering
+        \includegraphics[width=1\textwidth]{Image/MTM_growth4.jpg}
+        \caption{The growth rate of MTM4}
+        \label{fig:MTM4}
+\end{figure}
+
+We can also solve the Equation \ref{eq:MTM-Z}, the Code is listed in the Appendix as well. 

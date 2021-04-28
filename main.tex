@@ -1,0 +1,80 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[style=phys]{biblatex}
+\addbibresource{bib.bib}
+
+\title{Brief Introduction to Gyro-kinetic}
+
+\author{Max T. Curie}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+Disclaimer: The content of this article may have the direct relation with Author's PhD thesis. Please contact the author for the detail of the citations. 
+
+\begin{abstract}
+The goal of this exercise is to introduce everyone to the underlying physics governing GENE simulations, and bridge the gap between computational and analytic plasma physics for students entering the field. 
+\end{abstract}
+
+\tableofcontents
+
+\chapter{Introduction}
+\input{chapters/Intro}
+
+\chapter{General way to Linearize Vlasov Equation}
+\input{chapters/General_linear.tex}
+
+\chapter{Overview of Kinetic Instability}
+\input{chapters/Overview.tex}
+
+\chapter{Ion Temperature Gradient Mode}
+\input{chapters/ITG.tex}
+
+\chapter{Electron Temperature Gradient Mode}
+\input{chapters/ETG.tex}
+
+\chapter{Trapped Electron Mode}
+\input{chapters/TEM.tex}
+
+\chapter{Micro Tearing Mode}
+\label{ch:MTM}
+\input{chapters/MTM.tex}
+
+\chapter{MTM from Gladd, Drake}
+\input{chapters/MTM_eigen.tex}
+
+%\chapter{Micro Tearing Mode temp}
+%\input{chapters/MTM_temp.tex}
+
+\chapter{Tearing Mode temp}
+\input{chapters/TM.tex}
+
+\chapter{Transport}
+\input{chapters/Transport.tex}
+
+\chapter{Ordering}
+\input{chapters/Ordering.tex}
+
+\chapter{General information of Fusion}
+\input{chapters/Fusion.tex}
+
+\chapter{Experiment aspect of Fusion}
+\input{chapters/Experiment.tex}
+
+\chapter{Appendix}
+\input{chapters/Appendix.tex}
+
+\medskip
+ 
+\printbibliography
+
+\end{document}
